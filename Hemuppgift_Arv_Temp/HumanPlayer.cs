@@ -16,7 +16,7 @@ namespace Hemuppgift_Arv_Temp
 
         public override int TakePins(Board board)
         {
-            throw new NotImplementedException(); // tillfälligt
+            return 0;
         }
     }
 }

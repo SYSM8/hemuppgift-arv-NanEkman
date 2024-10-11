@@ -29,6 +29,16 @@ namespace Hemuppgift_Arv_Temp
                 if (pinsTaken == 1 || pinsTaken == 2)
                 {
                     Console.WriteLine($"Du har valt att ta {pinsTaken} sticka/stickor.");
+
+                    // Minska antal stickor på board
+                    if (pinsTaken <= NumOfPins)
+                    {
+                        NumOfPins -= pinsTaken; // Uppdatera antal stickor på board
+                    }
+                    else
+                    {
+                        Console.WriteLine("Det finns inte tillräckligt många stickor kvar!");
+                    }
                 }
                 else
                 {
@@ -43,6 +53,7 @@ namespace Hemuppgift_Arv_Temp
 
         public int GetNoPins()
         {
+            Console.WriteLine($"Antalet stickor kvar på brädet: {NumOfPins}");
             return NumOfPins;
         }
 

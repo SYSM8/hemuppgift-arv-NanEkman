@@ -7,8 +7,10 @@
         {
             // Objekt för klassen Board
             Board board = new Board();
-            board.SetUp(15); // antalet stickor på brädet
-            board.TakePins(1); // default värde satt
+
+            board.SetUp(15); // antalet startstickor på brädet
+            board.TakePins(1);
+            board.GetNoPins();
 
             //ComputerPlayer comPlay = new ComputerPlayer();
 

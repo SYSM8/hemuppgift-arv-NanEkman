@@ -15,6 +15,7 @@ namespace Hemuppgift_Arv_Temp
         {
             // behöver inte göra något specifikt med ComputerPlayer då detta skickats till basklassen Player
             // ev skapa objekt av ComputerPlayer här? 
+            ComputerPlayer player1 = new ComputerPlayer(computerPlayer);
         }
 
         public override int TakePins(Board board)
