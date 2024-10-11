@@ -13,12 +13,12 @@
 
             Player player1 = new HumanPlayer("Nän");
             player1.GetUserID();
-            player1.TakePins(board.NumOfPins);
+            player1.TakePins(board);
             board.GetNoPins();
 
             Player player2 = new ComputerPlayer("Computer");
             player2.GetUserID();
-            board.TakePins(1);
+            player2.TakePins(board);
             board.GetNoPins();
 
 

@@ -15,12 +15,14 @@ namespace Hemuppgift_Arv_Temp
         public void SetUp(int numOfPins) 
         {
             NumOfPins = numOfPins;
+            Console.WriteLine($"Antalet stickor på brädet är: {numOfPins}");
         }
 
         //Metoden låter spelaren dra en eller två stickor enligt spelarens strategi och returnerar sedan antalet dragna stickor
         public void TakePins(int numOfPins)
         {
-            Console.WriteLine("Du behöver välja om du ska ta 1 eller 2 stickor");
+            NumOfPins-=numOfPins;
+            Console.WriteLine($"{numOfPins} har tagits från brädet.");
         }
 
         public int GetNoPins() // Get Number of Pins

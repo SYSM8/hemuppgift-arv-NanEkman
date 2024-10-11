@@ -20,8 +20,20 @@ namespace Hemuppgift_Arv_Temp
         public override int TakePins(Board board)
         {
             Random randomPins = new Random();
-            int pinsTaken = randomPins.Next(1, 3);
-            Console.WriteLine($"Datorn tog {randomPins}");
+            int pinsTaken = randomPins.Next(1, 3); // Genererar random mellan 1 och 3
+
+            if(pinsTaken == 1 || pinsTaken == 2)
+            {
+                Console.WriteLine($"Datorn tog {pinsTaken}");
+                if(pinsTaken <= board.NumOfPins)
+                {
+                    board.NumOfPins -= pinsTaken;
+                }
+                else
+                {
+                    Console.WriteLine("Det finns inte tillräckligt många stickor kvar!");
+                }
+            }
             return board.NumOfPins;
         }
     }
