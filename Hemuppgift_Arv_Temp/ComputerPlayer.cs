@@ -19,8 +19,9 @@ namespace Hemuppgift_Arv_Temp
 
         public override int TakePins(Board board)
         {
-            Random random = new Random();
-            int pinsTaken = random.Next(1, 3);
+            Random randomPins = new Random();
+            int pinsTaken = randomPins.Next(1, 3);
+            Console.WriteLine($"Datorn tog {randomPins}");
             return board.NumOfPins;
         }
     }

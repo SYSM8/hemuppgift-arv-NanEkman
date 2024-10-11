@@ -6,20 +6,25 @@
         static void Main(string[] args)
         {
 
-            Player player1 = new HumanPlayer("Nän");
-            Player player2 = new ComputerPlayer("Computer");
-            player1.GetUserID();
-
             // Objekt för klassen Board
             Board board = new Board();
 
-            board.SetUp(15); // antalet startstickor på brädet
+            board.SetUp(15); // antalet startstickor på brädet         
+
+            Player player1 = new HumanPlayer("Nän");
+            player1.GetUserID();
+            player1.TakePins(board.NumOfPins);
+            board.GetNoPins();
+
+            Player player2 = new ComputerPlayer("Computer");
+            player2.GetUserID();
             board.TakePins(1);
             board.GetNoPins();
 
 
 
-            //ComputerPlayer comPlay = new ComputerPlayer();
+
+
 
         }
 
