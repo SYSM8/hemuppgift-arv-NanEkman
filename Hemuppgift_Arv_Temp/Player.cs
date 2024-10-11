@@ -9,8 +9,8 @@ namespace Hemuppgift_Arv_Temp
     public abstract class Player
     {
 
-        // Egenskaper
-        public string UserID { get; set; }
+        // Egenskaper/Properties
+        public string UserID { get; private set; } // private set då UserID inte ska ändras efter att spelaren skapats
 
         // Konstruktor
         public Player(string userID) // ändr namn parameter? 
@@ -21,12 +21,12 @@ namespace Hemuppgift_Arv_Temp
         // Metoder
         public string GetUserID()
         {
-
+            return UserID;
         }
 
-        public abstract int takePins(Board board) 
-        {
+        public abstract int TakePins(Board board);
 
-        }
+
+
     }
 }

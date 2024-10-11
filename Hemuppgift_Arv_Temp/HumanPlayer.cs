@@ -8,9 +8,15 @@ namespace Hemuppgift_Arv_Temp
 {
     public class HumanPlayer : Player
     {
-        public HumanPlayer(string humanPlayer) 
-        { 
-            HumanPlayer = humanPlayer;
+        public HumanPlayer(string humanPlayer) : base(humanPlayer)
+        {
+            // behöver inte göra något specifikt med HumanPlayer då detta skickats till basklassen Player
+            // ev skapa objekt av HumanPlayer här? 
+        }
+
+        public override int TakePins(Board board)
+        {
+            throw new NotImplementedException(); // tillfälligt
         }
     }
 }
