@@ -9,7 +9,7 @@ namespace Hemuppgift_Arv_Temp
     public class Board
     {
         // Egenskaper/Properties
-        public int NumOfPins { get; private set; } // NumOfPins bärde kan endast ändras från denna klass
+        public int NumOfPins { get; set; } 
 
         // Metoder
         public void SetUp(int numOfPins) 
@@ -51,7 +51,7 @@ namespace Hemuppgift_Arv_Temp
             }
         }
 
-        public int GetNoPins()
+        public int GetNoPins() // Get Number of Pins
         {
             Console.WriteLine($"Antalet stickor kvar på brädet: {NumOfPins}");
             return NumOfPins;

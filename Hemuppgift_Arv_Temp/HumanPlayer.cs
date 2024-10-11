@@ -16,7 +16,8 @@ namespace Hemuppgift_Arv_Temp
 
         public override int TakePins(Board board)
         {
-            return 0;
+
+            return board.NumOfPins;
         }
     }
 }

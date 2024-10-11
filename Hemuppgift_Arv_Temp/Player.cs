@@ -13,7 +13,7 @@ namespace Hemuppgift_Arv_Temp
         public string UserID { get; private set; } // private set då UserID inte ska ändras efter att spelaren skapats
 
         // Konstruktor
-        public Player(string userID) // ändr namn parameter? 
+        public Player(string userID) 
         {
             UserID = userID;
         }

@@ -15,14 +15,13 @@ namespace Hemuppgift_Arv_Temp
         {
             // behöver inte göra något specifikt med ComputerPlayer då detta skickats till basklassen Player
             // ev skapa objekt av ComputerPlayer här? 
-            ComputerPlayer player1 = new ComputerPlayer(computerPlayer);
         }
 
         public override int TakePins(Board board)
         {
             Random random = new Random();
             int pinsTaken = random.Next(1, 3);
-            return pinsTaken;
+            return board.NumOfPins;
         }
     }
 }
