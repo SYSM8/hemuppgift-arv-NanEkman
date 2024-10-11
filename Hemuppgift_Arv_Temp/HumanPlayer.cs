@@ -18,8 +18,6 @@ namespace Hemuppgift_Arv_Temp
         {
             try
             {
-                Console.WriteLine($"Your userID is: {UserID}");
-
                 Console.WriteLine("Ange om du vill ta 1 eller 2 stickor:");
                 int pinsTaken = Convert.ToInt32(Console.ReadLine());
 

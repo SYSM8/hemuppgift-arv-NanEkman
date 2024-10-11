@@ -21,7 +21,7 @@ namespace Hemuppgift_Arv_Temp
         // Metoder
         public string GetUserID()
         {
-            return $"Your userID is: {UserID} ";
+            return $"UserID is: {UserID} ";
         }
 
         public abstract int TakePins(Board board);

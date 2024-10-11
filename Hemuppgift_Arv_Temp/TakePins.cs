@@ -12,15 +12,54 @@
             board.SetUp(15); // antalet startstickor på brädet         
 
             Player player1 = new HumanPlayer("Nän");
-            player1.GetUserID();
-            player1.TakePins(board);
-            board.GetNoPins();
-
             Player player2 = new ComputerPlayer("Computer");
-            player2.GetUserID();
-            player2.TakePins(board);
-            board.GetNoPins();
 
+            // HumanPlayer startar
+            Player currentPlayer = player1;
+
+            bool isPlayer1Turn = true;
+
+            while (board.NumOfPins > 0)
+            {
+                if (isPlayer1Turn)
+                {
+                    currentPlayer = player1;
+
+                    Console.WriteLine($"{currentPlayer.GetUserID()}s tur!");
+
+                    currentPlayer.TakePins(board);
+
+                    board.GetNoPins();
+
+                    // Kontrollera om spelet är slut
+                    if (board.NumOfPins == 0)
+                    {
+                        Console.WriteLine($"{currentPlayer.GetUserID()} vann!");
+                        // avsluta spelet
+                        break;
+                    }
+                }
+                else
+                {
+                    currentPlayer = player2;
+
+                    Console.WriteLine($"{currentPlayer.GetUserID()}s tur!");
+
+                    currentPlayer.TakePins(board);
+
+                    board.GetNoPins();
+
+                    // Kontrollera om spelet är slut
+                    if (board.NumOfPins == 0)
+                    {
+                        Console.WriteLine($"{currentPlayer.GetUserID()} vann!");
+                        // avsluta spelet
+                        break;
+                    }
+                }
+
+                isPlayer1Turn =! isPlayer1Turn;
+            }
         }
     }
 }

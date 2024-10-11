@@ -20,7 +20,7 @@ namespace Hemuppgift_Arv_Temp
 
         public void TakePins(int numOfPins)
         {
-            NumOfPins-=numOfPins;
+            NumOfPins -= numOfPins;
             Console.WriteLine($"{numOfPins} har tagits från brädet.");
         }
 
@@ -29,10 +29,5 @@ namespace Hemuppgift_Arv_Temp
             Console.WriteLine($"Antalet stickor kvar på brädet: {NumOfPins}");
             return NumOfPins;
         }
-
-        //        Programmet ska inkludera lämpliga utskrifter(antalet stickor kvar på bordet,
-        //antalet stickor som datorspelaren tar, vem som vinner) så att användaren kan
-        //följa spelets gång.Det ska också hantera felaktig indata på ett robust sätt
-        //(t.ex.om en människospelare försöker ta för få eller för många stickor).
     }
 }
