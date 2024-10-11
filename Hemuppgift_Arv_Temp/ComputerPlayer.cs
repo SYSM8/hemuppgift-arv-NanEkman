@@ -14,15 +14,17 @@ namespace Hemuppgift_Arv_Temp
         public ComputerPlayer(string computerPlayer) : base(computerPlayer)
         {
             // behöver inte göra något specifikt med ComputerPlayer då detta skickats till basklassen Player
-            // ev skapa objekt av ComputerPlayer här? 
         }
 
+        //Metoden låter spelaren dra en eller två stickor enligt spelarens strategi och returnerar sedan antalet dragna stickor
         public override int TakePins(Board board)
         {
             Random randomPins = new Random();
             int pinsTaken = randomPins.Next(1, 3); // Genererar random mellan 1 och 3
 
-            if(pinsTaken == 1 || pinsTaken == 2)
+            Console.WriteLine($"Your userID is: {UserID}");
+
+            if (pinsTaken == 1 || pinsTaken == 2)
             {
                 Console.WriteLine($"Datorn tog {pinsTaken}");
                 if(pinsTaken <= board.NumOfPins)

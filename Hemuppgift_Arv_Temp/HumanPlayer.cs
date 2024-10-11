@@ -11,13 +11,15 @@ namespace Hemuppgift_Arv_Temp
         public HumanPlayer(string humanPlayer) : base(humanPlayer)
         {
             // behöver inte göra något specifikt med HumanPlayer då detta skickats till basklassen Player
-            // ev skapa objekt av HumanPlayer här? 
         }
 
+        //Metoden låter spelaren dra en eller två stickor enligt spelarens strategi och returnerar sedan antalet dragna stickor
         public override int TakePins(Board board)
         {
             try
             {
+                Console.WriteLine($"Your userID is: {UserID}");
+
                 Console.WriteLine("Ange om du vill ta 1 eller 2 stickor:");
                 int pinsTaken = Convert.ToInt32(Console.ReadLine());
 

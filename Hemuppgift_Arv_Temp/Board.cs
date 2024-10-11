@@ -18,7 +18,6 @@ namespace Hemuppgift_Arv_Temp
             Console.WriteLine($"Antalet stickor på brädet är: {numOfPins}");
         }
 
-        //Metoden låter spelaren dra en eller två stickor enligt spelarens strategi och returnerar sedan antalet dragna stickor
         public void TakePins(int numOfPins)
         {
             NumOfPins-=numOfPins;

@@ -21,12 +21,6 @@
             player2.TakePins(board);
             board.GetNoPins();
 
-
-
-
-
-
         }
-
     }
 }
