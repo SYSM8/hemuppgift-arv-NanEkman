@@ -1,4 +1,7 @@
-﻿namespace Hemuppgift_Arv_Temp
+﻿using System.Diagnostics.Metrics;
+using System.Security.Cryptography;
+
+namespace Hemuppgift_Arv_Temp
 {
     internal class TakePins
     {
