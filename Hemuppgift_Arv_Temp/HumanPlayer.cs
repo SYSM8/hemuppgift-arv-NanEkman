@@ -16,38 +16,43 @@ namespace Hemuppgift_Arv_Temp
         //Metoden låter spelaren dra en eller två stickor enligt spelarens strategi och returnerar sedan antalet dragna stickor
         public override int TakePins(Board board)
         {
-            try
+            int pinsTaken = 0;         
+            bool validInput = false; // Variabel för att kontrollera om inmatningen är giltig
+
+            while (!validInput)
             {
-                Console.WriteLine("Ange om du vill ta 1 eller 2 stickor:");
-                int pinsTaken = Convert.ToInt32(Console.ReadLine());
-
-                // Kontrollera att spelaren väljer 1 eller 2 stickor
-                if (pinsTaken == 1 || pinsTaken == 2)
+                try
                 {
-                    Console.WriteLine($"Du har valt att ta {pinsTaken} sticka/stickor.");
+                    Console.WriteLine("Ange om du vill ta 1 eller 2 stickor:");
+                    pinsTaken = Convert.ToInt32(Console.ReadLine());
 
-                    // Minska antal stickor på board
-                    if (pinsTaken <= board.NumOfPins)
+                    // Kontrollera att spelaren väljer 1 eller 2 stickor
+                    if (pinsTaken == 1 || pinsTaken == 2)
                     {
-                        board.NumOfPins -= pinsTaken; // Uppdatera antal stickor på board
-                        
+                        // Kontrollera om det finns tillräckligt många stickor på brädet
+                        if (pinsTaken <= board.NumOfPins) 
+                        {
+                            Console.WriteLine($"Du har valt att ta {pinsTaken} sticka/stickor.");
+                            board.NumOfPins -= pinsTaken; // Minska antal stickor på brädet
+                            validInput = true; // Avsluta loopen då korrekt inmatning har gjorts
+                        }
+                        else
+                        {
+                            Console.WriteLine("Det finns inte tillräckligt många stickor kvar!");
+                        }
                     }
                     else
                     {
-                        Console.WriteLine("Det finns inte tillräckligt många stickor kvar!");
+                        Console.WriteLine("Du måste välja antingen 1 eller 2 stickor.");
                     }
                 }
-                else
+                catch (FormatException)
                 {
-                    Console.WriteLine("Du måste välja antingen 1 eller 2 stickor.");
+                    Console.WriteLine("Felaktig inmatning, ange en siffra, 1 eller 2.");
                 }
             }
-            catch (FormatException)
-            {
-                Console.WriteLine("Felaktig inmatning, ange en siffra, 1 eller 2.");
-            }
-            return board.NumOfPins;
 
+            return board.NumOfPins;
         }
     }
 }
