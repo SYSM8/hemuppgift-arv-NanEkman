@@ -15,7 +15,8 @@ namespace Hemuppgift_Arv_Temp
             board.SetUp(15); // antalet startstickor på brädet         
 
             Player player1 = new HumanPlayer("Nän");
-            Player player2 = new ComputerPlayer("Computer");
+            //Player player2 = new ComputerPlayer("Computer");
+            Player player2 = new AdvancedComputerPlayer("Advanced Computer");
 
             // HumanPlayer startar
             Player currentPlayer = player1;
