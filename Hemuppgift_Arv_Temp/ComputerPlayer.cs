@@ -20,7 +20,7 @@ namespace Hemuppgift_Arv_Temp
         public override int TakePins(Board board)
         {
             Random randomPins = new Random();
-            int pinsTaken = randomPins.Next(1, 3); // Genererar random mellan 1 och 3
+            int pinsTaken = randomPins.Next(1, 3); // Genererar random mellan 1 och 2
 
             if (pinsTaken == 1 || pinsTaken == 2)
             {
